@@ -2105,7 +2105,7 @@ var Logo = function (_a) {
         React__default['default'].createElement(Logo$1, { className: "desktop-icon", isDark: isDark })));
     return (React__default['default'].createElement("div", { style: { display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' } },
         React__default['default'].createElement(MenuButton, { "aria-label": "Toggle menu", onClick: togglePush, mr: "24px" }, isPushed ? (React__default['default'].createElement(Icon$u, { width: "24px", color: "textSubtle" })) : (React__default['default'].createElement(Icon$v, { width: "24px", color: "textSubtle" }))),
-        isAbsoluteUrl ? (React__default['default'].createElement(StyledLink, { as: "a", href: href, "aria-label": "Pancake home page" }, innerLogo)) : (React__default['default'].createElement(StyledLink, { to: href, "aria-label": "Pancake home page" }, innerLogo))));
+        isAbsoluteUrl ? (React__default['default'].createElement(StyledLink, { as: "a", href: href, target: "_blank", "aria-label": "Pancake home page" }, innerLogo)) : (React__default['default'].createElement(StyledLink, { to: href, target: "_blank", "aria-label": "Pancake home page" }, innerLogo))));
 };
 var templateObject_1$c;
 
@@ -2339,10 +2339,10 @@ var PanelBody = function (_a) {
         if (entry.items) {
             return (React__default['default'].createElement(Accordion, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: entry.initialOpenState, className: calloutClass }, isPushed &&
                 entry.items.map(function (item) { return (React__default['default'].createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick },
-                    React__default['default'].createElement(MenuLink, { href: item.href }, item.label))); })));
+                    React__default['default'].createElement(MenuLink, { href: item.href, target: "_blank" }, item.label))); })));
         }
         return (React__default['default'].createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
-            React__default['default'].createElement(MenuLink, { href: entry.href, onClick: handleClick },
+            React__default['default'].createElement(MenuLink, { href: entry.href, target: "_blank", onClick: handleClick },
                 iconElement,
                 React__default['default'].createElement(LinkLabel, { isPushed: isPushed }, entry.label))));
     })));

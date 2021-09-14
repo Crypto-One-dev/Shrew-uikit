@@ -2092,7 +2092,7 @@ var Logo = function (_a) {
         React.createElement(Logo$1, { className: "desktop-icon", isDark: isDark })));
     return (React.createElement("div", { style: { display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center' } },
         React.createElement(MenuButton, { "aria-label": "Toggle menu", onClick: togglePush, mr: "24px" }, isPushed ? (React.createElement(Icon$u, { width: "24px", color: "textSubtle" })) : (React.createElement(Icon$v, { width: "24px", color: "textSubtle" }))),
-        isAbsoluteUrl ? (React.createElement(StyledLink, { as: "a", href: href, "aria-label": "Pancake home page" }, innerLogo)) : (React.createElement(StyledLink, { to: href, "aria-label": "Pancake home page" }, innerLogo))));
+        isAbsoluteUrl ? (React.createElement(StyledLink, { as: "a", href: href, target: "_blank", "aria-label": "Pancake home page" }, innerLogo)) : (React.createElement(StyledLink, { to: href, target: "_blank", "aria-label": "Pancake home page" }, innerLogo))));
 };
 var templateObject_1$c;
 
@@ -2326,10 +2326,10 @@ var PanelBody = function (_a) {
         if (entry.items) {
             return (React.createElement(Accordion, { key: entry.label, isPushed: isPushed, pushNav: pushNav, icon: iconElement, label: entry.label, initialOpenState: entry.initialOpenState, className: calloutClass }, isPushed &&
                 entry.items.map(function (item) { return (React.createElement(MenuEntry, { key: item.href, secondary: true, isActive: item.href === location.pathname, onClick: handleClick },
-                    React.createElement(MenuLink, { href: item.href }, item.label))); })));
+                    React.createElement(MenuLink, { href: item.href, target: "_blank" }, item.label))); })));
         }
         return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
-            React.createElement(MenuLink, { href: entry.href, onClick: handleClick },
+            React.createElement(MenuLink, { href: entry.href, target: "_blank", onClick: handleClick },
                 iconElement,
                 React.createElement(LinkLabel, { isPushed: isPushed }, entry.label))));
     })));
