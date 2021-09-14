@@ -2331,7 +2331,7 @@ var PanelBody = function (_a) {
                         React.createElement(MenuLink, { href: item.href }, item.label))); })));
         }
         return (React.createElement(MenuEntry, { key: entry.label, isActive: entry.href === location.pathname, className: calloutClass },
-            React.createElement(MenuLink, { href: entry.href, target: "_blank", onClick: handleClick },
+            React.createElement(MenuLink, { href: entry.href, onClick: handleClick },
                 iconElement,
                 React.createElement(LinkLabel, { isPushed: isPushed }, entry.label))));
     })));
